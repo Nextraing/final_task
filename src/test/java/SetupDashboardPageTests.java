@@ -21,7 +21,7 @@ public class SetupDashboardPageTests {
     static void beforeAll() {
 
         LOG.info("----------Tests for Dashboard page.----------");
-        DriverConfiguration.getChromeConfiguration();
+        DriverConfiguration.getOperaConfiguration();
         open();
         LOGIN_PAGE.openPage();
         LOGIN_PAGE.login(USER);
