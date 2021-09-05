@@ -10,7 +10,7 @@ public class SetupOrangeHRMliveTests {
     static void beforeAll() {
 
         LOG.info("--------------------------------------------------");
-        DriverConfiguration.getAnyConfiguration();
+        DriverConfiguration.getOperaConfiguration();
         open();
     }
 
