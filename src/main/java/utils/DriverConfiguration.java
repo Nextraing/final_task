@@ -1,6 +1,7 @@
 package utils;
 
 import com.codeborne.selenide.Configuration;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import static utils.Log.LOG;
 
@@ -10,6 +11,9 @@ public class DriverConfiguration {
 
     public static void getChromeConfiguration() {
 
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-features=VizDisplayCompositor");
+        Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, options);
         Configuration.browser = "chrome";
         Configuration.startMaximized = true;
     }
